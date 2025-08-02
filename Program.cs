@@ -13,11 +13,19 @@ namespace api
             for (int i = 0; i < y; i++)
             {
                 double x = double.Parse(Console.ReadLine());
+                if (x < 0)
+                {
+                    Console.WriteLine("Die Zahl darf nicht unter 0 sein.");
+                    Console.WriteLine("Positives Ergebnis ist:   " + x * x);
+                    return;
+                }
                 double z = Math.Sqrt(x);
                 Console.WriteLine("Die Wurzel aus   " + x);
                 Console.WriteLine("Ist   " + z);
+                
                 List<double> list = new List<double>();
                 list.Add(z);
+                list.Contains(z);
 
 
                 if (i == y)
